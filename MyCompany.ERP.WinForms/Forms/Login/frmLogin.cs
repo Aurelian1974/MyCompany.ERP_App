@@ -80,7 +80,9 @@ public partial class frmLogin : Form
 
     private void btnCancel_Click(object sender, EventArgs e)
     {
-        Application.Exit();
+        //Application.Exit();
+        this.DialogResult = DialogResult.Cancel;
+        this.Close();
     }
 
     private void frmLogin_Load(object sender, EventArgs e)

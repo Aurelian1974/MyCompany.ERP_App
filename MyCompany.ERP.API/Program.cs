@@ -1,3 +1,7 @@
+﻿using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
 using MyCompany.Common.SharedInterfaces.Login;
 using MyCompany.ERP.API.Services.Login;
 
@@ -6,19 +10,39 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+builder.Services.AddSwaggerGen(c =>
+{
+    c.SwaggerDoc("v1", new() { Title = "MyCompany ERP API", Version = "v1" });
+});
 
 // Register custom services
 builder.Services.AddScoped<IAuthService, AuthService>();
 
-// Add CORS
+// Add CORS - configurare pentru WinForms și alte clienti
 builder.Services.AddCors(options =>
 {
-    options.AddPolicy("AllowWinForms", policy =>
+    options.AddPolicy("AllowAll", policy =>
     {
         policy.AllowAnyOrigin()
               .AllowAnyMethod()
               .AllowAnyHeader();
+    });
+});
+
+// Add logging
+builder.Services.AddLogging(logging =>
+{
+    logging.AddConsole();
+    logging.AddDebug();
+});
+
+// Configure Kestrel pentru a asculta pe porturile dorite
+builder.WebHost.ConfigureKestrel(serverOptions =>
+{
+    serverOptions.ListenLocalhost(5002); // HTTP
+    serverOptions.ListenLocalhost(7002, listenOptions =>
+    {
+        listenOptions.UseHttps(); // HTTPS
     });
 });
 
@@ -28,12 +52,89 @@ var app = builder.Build();
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
-    app.UseSwaggerUI();
+    app.UseSwaggerUI(c =>
+    {
+        c.SwaggerEndpoint("/swagger/v1/swagger.json", "MyCompany ERP API V1");
+        c.RoutePrefix = "swagger"; // Swagger la /swagger
+    });
+
+    app.UseDeveloperExceptionPage();
+}
+else
+{
+    app.UseExceptionHandler("/Error");
+    app.UseHsts();
 }
 
+// Middleware pipeline
 app.UseHttpsRedirection();
-app.UseCors("AllowWinForms");
+app.UseCors("AllowAll");
+app.UseRouting();
 app.UseAuthorization();
+
+// Map controllers
 app.MapControllers();
 
-app.Run();
+// Health check endpoint
+app.MapGet("/health", () => new { Status = "Healthy", Timestamp = DateTime.UtcNow });
+
+// Root endpoint
+app.MapGet("/", () => "MyCompany ERP API is running!");
+
+// Logging pentru startup
+var logger = app.Services.GetRequiredService<ILogger<Program>>();
+logger.LogInformation("Starting MyCompany ERP API...");
+logger.LogInformation("API will be available at:");
+logger.LogInformation("- HTTPS: https://localhost:7002");
+logger.LogInformation("- HTTP: http://localhost:5002");
+logger.LogInformation("- Swagger: https://localhost:7002/swagger");
+
+try
+{
+    await app.RunAsync();
+}
+catch (Exception ex)
+{
+    logger.LogError(ex, "An error occurred while starting the application");
+    throw;
+}
+
+//using MyCompany.Common.SharedInterfaces.Login;
+//using MyCompany.ERP.API.Services.Login;
+
+//var builder = WebApplication.CreateBuilder(args);
+
+//// Add services to the container.
+//builder.Services.AddControllers();
+//builder.Services.AddEndpointsApiExplorer();
+//builder.Services.AddSwaggerGen();
+
+//// Register custom services
+//builder.Services.AddScoped<IAuthService, AuthService>();
+
+//// Add CORS
+//builder.Services.AddCors(options =>
+//{
+//    options.AddPolicy("AllowWinForms", policy =>
+//    {
+//        policy.AllowAnyOrigin()
+//              .AllowAnyMethod()
+//              .AllowAnyHeader();
+//    });
+//});
+//builder.WebHost.UseUrls("https://localhost:7002", "http://localhost:5002");
+//var app = builder.Build();
+
+//// Configure the HTTP request pipeline.
+//if (app.Environment.IsDevelopment())
+//{
+//    app.UseSwagger();
+//    app.UseSwaggerUI();
+//}
+
+//app.UseHttpsRedirection();
+//app.UseCors("AllowWinForms");
+//app.UseAuthorization();
+//app.MapControllers();
+
+//app.Run();
