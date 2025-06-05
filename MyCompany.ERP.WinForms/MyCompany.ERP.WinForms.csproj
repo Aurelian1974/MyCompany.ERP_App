@@ -44,4 +44,10 @@
     <ProjectReference Include="..\MyCompany.ERP.API\MyCompany.ERP.API.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Compile Update="Forms\Login\frmLogin.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+  </ItemGroup>
+
 </Project>

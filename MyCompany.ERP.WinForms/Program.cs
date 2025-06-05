@@ -15,7 +15,7 @@ namespace MyCompany.ERP.WinForms;
 internal static class Program
 {
     [STAThread]
-    static async Task Main()
+    static void Main()
     {
         Application.EnableVisualStyles();
         Application.SetCompatibleTextRenderingDefault(false);
