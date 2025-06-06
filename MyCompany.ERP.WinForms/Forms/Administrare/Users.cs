@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace MyCompany.ERP.WinForms.Forms.Administrare
 {
-    public partial class Users : Form
+    public partial class frmUsers : Form
     {
-        public Users()
+        public frmUsers()
         {
             InitializeComponent();
         }

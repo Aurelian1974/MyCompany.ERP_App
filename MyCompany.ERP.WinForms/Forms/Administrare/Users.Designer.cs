@@ -1,6 +1,6 @@
 ﻿namespace MyCompany.ERP.WinForms.Forms.Administrare
 {
-    partial class Users
+    partial class frmUsers
     {
         /// <summary>
         /// Required designer variable.
@@ -28,123 +28,123 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label1 = new Label();
-            label2 = new Label();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
-            button1 = new Button();
-            button2 = new Button();
-            button3 = new Button();
-            dataGridView1 = new DataGridView();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            lblUserName = new Label();
+            lblPassword = new Label();
+            txtUserName = new TextBox();
+            txtPaswoerd = new TextBox();
+            btnAdd = new Button();
+            btnModify = new Button();
+            btnDelete = new Button();
+            dgwAllUser = new DataGridView();
+            ((System.ComponentModel.ISupportInitialize)dgwAllUser).BeginInit();
             SuspendLayout();
             // 
-            // label1
+            // lblUserName
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(36, 42);
-            label1.Margin = new Padding(4, 0, 4, 0);
-            label1.Name = "label1";
-            label1.Size = new Size(52, 21);
-            label1.TabIndex = 0;
-            label1.Text = "label1";
+            lblUserName.AutoSize = true;
+            lblUserName.Location = new Point(36, 42);
+            lblUserName.Margin = new Padding(4, 0, 4, 0);
+            lblUserName.Name = "lblUserName";
+            lblUserName.Size = new Size(73, 21);
+            lblUserName.TabIndex = 0;
+            lblUserName.Text = "Utilizator";
             // 
-            // label2
+            // lblPassword
             // 
-            label2.AutoSize = true;
-            label2.Location = new Point(36, 97);
-            label2.Margin = new Padding(4, 0, 4, 0);
-            label2.Name = "label2";
-            label2.Size = new Size(52, 21);
-            label2.TabIndex = 1;
-            label2.Text = "label2";
+            lblPassword.AutoSize = true;
+            lblPassword.Location = new Point(36, 97);
+            lblPassword.Margin = new Padding(4, 0, 4, 0);
+            lblPassword.Name = "lblPassword";
+            lblPassword.Size = new Size(53, 21);
+            lblPassword.TabIndex = 1;
+            lblPassword.Text = "Parola";
             // 
-            // textBox1
+            // txtUserName
             // 
-            textBox1.Location = new Point(123, 43);
-            textBox1.Margin = new Padding(4, 4, 4, 4);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(127, 29);
-            textBox1.TabIndex = 2;
+            txtUserName.Location = new Point(123, 43);
+            txtUserName.Margin = new Padding(4, 4, 4, 4);
+            txtUserName.Name = "txtUserName";
+            txtUserName.Size = new Size(127, 29);
+            txtUserName.TabIndex = 2;
             // 
-            // textBox2
+            // txtPaswoerd
             // 
-            textBox2.Location = new Point(123, 97);
-            textBox2.Margin = new Padding(4, 4, 4, 4);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(127, 29);
-            textBox2.TabIndex = 3;
+            txtPaswoerd.Location = new Point(123, 97);
+            txtPaswoerd.Margin = new Padding(4, 4, 4, 4);
+            txtPaswoerd.Name = "txtPaswoerd";
+            txtPaswoerd.Size = new Size(127, 29);
+            txtPaswoerd.TabIndex = 3;
             // 
-            // button1
+            // btnAdd
             // 
-            button1.Location = new Point(15, 161);
-            button1.Margin = new Padding(4, 4, 4, 4);
-            button1.Name = "button1";
-            button1.Size = new Size(96, 32);
-            button1.TabIndex = 4;
-            button1.Text = "button1";
-            button1.UseVisualStyleBackColor = true;
+            btnAdd.Location = new Point(15, 161);
+            btnAdd.Margin = new Padding(4, 4, 4, 4);
+            btnAdd.Name = "btnAdd";
+            btnAdd.Size = new Size(96, 32);
+            btnAdd.TabIndex = 4;
+            btnAdd.Text = "Adaugare";
+            btnAdd.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btnModify
             // 
-            button2.Location = new Point(120, 161);
-            button2.Margin = new Padding(4, 4, 4, 4);
-            button2.Name = "button2";
-            button2.Size = new Size(96, 32);
-            button2.TabIndex = 5;
-            button2.Text = "button2";
-            button2.UseVisualStyleBackColor = true;
+            btnModify.Location = new Point(120, 161);
+            btnModify.Margin = new Padding(4, 4, 4, 4);
+            btnModify.Name = "btnModify";
+            btnModify.Size = new Size(96, 32);
+            btnModify.TabIndex = 5;
+            btnModify.Text = "Modificare";
+            btnModify.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // btnDelete
             // 
-            button3.Location = new Point(224, 161);
-            button3.Margin = new Padding(4, 4, 4, 4);
-            button3.Name = "button3";
-            button3.Size = new Size(96, 32);
-            button3.TabIndex = 6;
-            button3.Text = "button3";
-            button3.UseVisualStyleBackColor = true;
+            btnDelete.Location = new Point(224, 161);
+            btnDelete.Margin = new Padding(4, 4, 4, 4);
+            btnDelete.Name = "btnDelete";
+            btnDelete.Size = new Size(96, 32);
+            btnDelete.TabIndex = 6;
+            btnDelete.Text = "Stergere";
+            btnDelete.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
+            // dgwAllUser
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(15, 202);
-            dataGridView1.Margin = new Padding(4, 4, 4, 4);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(531, 210);
-            dataGridView1.TabIndex = 7;
+            dgwAllUser.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgwAllUser.Location = new Point(15, 202);
+            dgwAllUser.Margin = new Padding(4, 4, 4, 4);
+            dgwAllUser.Name = "dgwAllUser";
+            dgwAllUser.Size = new Size(531, 210);
+            dgwAllUser.TabIndex = 7;
             // 
-            // Users
+            // frmUsers
             // 
             AutoScaleDimensions = new SizeF(9F, 21F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(705, 496);
-            Controls.Add(dataGridView1);
-            Controls.Add(button3);
-            Controls.Add(button2);
-            Controls.Add(button1);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
-            Controls.Add(label2);
-            Controls.Add(label1);
+            Controls.Add(dgwAllUser);
+            Controls.Add(btnDelete);
+            Controls.Add(btnModify);
+            Controls.Add(btnAdd);
+            Controls.Add(txtPaswoerd);
+            Controls.Add(txtUserName);
+            Controls.Add(lblPassword);
+            Controls.Add(lblUserName);
             Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             Margin = new Padding(4, 4, 4, 4);
-            Name = "Users";
+            Name = "frmUsers";
             Text = "Users";
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgwAllUser).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private Label label1;
-        private Label label2;
-        private TextBox textBox1;
-        private TextBox textBox2;
-        private Button button1;
-        private Button button2;
-        private Button button3;
-        private DataGridView dataGridView1;
+        private Label lblUserName;
+        private Label lblPassword;
+        private TextBox txtUserName;
+        private TextBox txtPaswoerd;
+        private Button btnAdd;
+        private Button btnModify;
+        private Button btnDelete;
+        private DataGridView dgwAllUser;
     }
 }
