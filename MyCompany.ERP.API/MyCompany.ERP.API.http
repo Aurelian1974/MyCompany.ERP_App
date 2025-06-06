@@ -1,6 +1,6 @@
-@MyCompany.ERP.API_HostAddress = http://localhost:5172
+# @MyCompany.ERP.API_HostAddress = http://localhost:5172
 
-GET {{MyCompany.ERP.API_HostAddress}}/weatherforecast/
-Accept: application/json
+# GET {{MyCompany.ERP.API_HostAddress}}/weatherforecast/
+# Accept: application/json
 
 ###
