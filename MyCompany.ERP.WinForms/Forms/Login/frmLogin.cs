@@ -27,7 +27,7 @@ public partial class frmLogin : Form
         this.CancelButton = btnCancel;
     }
 
-    private async void btnLogin_Click(object sender, EventArgs e)
+    private async void btnLogin_Click(object? sender, EventArgs e)
     {
         if (_isProcessing) return;
 
@@ -78,7 +78,7 @@ public partial class frmLogin : Form
         }
     }
 
-    private void btnCancel_Click(object sender, EventArgs e)
+    private void btnCancel_Click(object? sender, EventArgs e)
     {
         //Application.Exit();
         this.DialogResult = DialogResult.Cancel;
@@ -86,7 +86,7 @@ public partial class frmLogin : Form
         
     }
 
-    private void frmLogin_Load(object sender, EventArgs e)
+    private void frmLogin_Load(object? sender, EventArgs e)
     {
         txtUser.Focus();
     }

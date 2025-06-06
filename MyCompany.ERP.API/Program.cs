@@ -17,6 +17,7 @@ builder.Services.AddSwaggerGen(c =>
 
 // Register custom services
 builder.Services.AddScoped<IAuthService, AuthService>();
+builder.Services.AddScoped<IUserRepository, UserRepository>();
 
 // Add CORS - configurare pentru WinForms și alte clienti
 builder.Services.AddCors(options =>
