@@ -83,13 +83,15 @@ public partial class frmLogin : Form
         //Application.Exit();
         this.DialogResult = DialogResult.Cancel;
         this.Close();
-        
+
     }
 
     private void frmLogin_Load(object? sender, EventArgs e)
     {
         txtUser.Focus();
     }
+
+    
 }
 
 

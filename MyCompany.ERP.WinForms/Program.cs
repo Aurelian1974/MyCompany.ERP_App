@@ -1,9 +1,11 @@
-﻿using Microsoft.Extensions.Configuration;
+﻿using Autofac.Extensions.DependencyInjection;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using MyCompany.Common.SharedInterfaces.Login;
 using MyCompany.ERP.WinForms.Forms.MainForm;
 using MyCompany.ERP.WinForms.Services.Login;
+using Syncfusion.Licensing;
 using System;
 using System.IO;
 using System.Net.Http;
@@ -17,6 +19,7 @@ internal static class Program
     [STAThread]
     static void Main()
     {
+        SyncfusionLicenseProvider.RegisterLicense("Ngo9BigBOggjHTQxAR8/V1NNaF5cXmBCf1FpRmJGdld5fUVHYVZUTXxaS00DNHVRdkdmWXlednVVQmBcVkR0XERWYUA=");
         Application.EnableVisualStyles();
         Application.SetCompatibleTextRenderingDefault(false);
 
@@ -24,23 +27,14 @@ internal static class Program
         var host = CreateHostBuilder().Build();
 
         // Pornește host-ul în background
-         host.StartAsync();
+        host.StartAsync();
 
         try
         {
-            // Obține service-ul principal din DI container
-            var authService = host.Services.GetRequiredService<IAuthService>();
-
+            var authService = Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService<IAuthService>(host.Services);
+            Application.Run(new frmLogin(authService));
             // Pornește aplicația cu dependency injection
             Application.Run(new frmLogin(authService)); // Sau forma ta principală
-            //using (var loginForm = new frmLogin(authService))
-            //{
-            //    if (loginForm.ShowDialog() == DialogResult.OK)
-            //    {
-            //        // Deschide MainForm dacă login-ul a avut succes
-            //        Application.Run(new MainForm());
-            //    }
-            //}
         }
         finally
         {

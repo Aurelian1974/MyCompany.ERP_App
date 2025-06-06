@@ -25,7 +25,11 @@ public class UsersController : ControllerBase
     [HttpPost]
     public async Task<IActionResult> AddUser([FromBody] UserDto user)
     {
-        // Poți adăuga validări suplimentare aici (ex: user unic)
+        if (string.IsNullOrWhiteSpace(user.UserName) || string.IsNullOrWhiteSpace(user.Password))
+        {
+            return BadRequest("UserName and Password cannot be null or empty.");
+        }
+
         await _userRepository.AddUserAsync(user.UserName, user.Password);
         return Ok();
     }
@@ -34,6 +38,11 @@ public class UsersController : ControllerBase
     [HttpPut("{id}")]
     public async Task<IActionResult> UpdateUser(int id, [FromBody] UserDto user)
     {
+        if (string.IsNullOrWhiteSpace(user.UserName) || string.IsNullOrWhiteSpace(user.Password))
+        {
+            return BadRequest("UserName and Password cannot be null or empty.");
+        }
+
         await _userRepository.UpdateUserAsync(id, user.UserName, user.Password);
         return Ok();
     }
