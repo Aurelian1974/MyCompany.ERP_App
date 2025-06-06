@@ -23,4 +23,14 @@ public partial class MainForm : Form
     {
         // Inițializare MainForm
     }
+
+    private void button1_Click(object sender, EventArgs e)
+    {
+        Application.Exit();
+    }
+
+    private void utilizatoriToolStripMenuItem_Click(object sender, EventArgs e)
+    {
+
+    }
 }
