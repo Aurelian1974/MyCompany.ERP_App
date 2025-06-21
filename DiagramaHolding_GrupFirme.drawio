@@ -1,0 +1,103 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36" version="27.1.4">
+  <diagram name="Page-1" id="9c7_id7GZ4-PtnPfxSFb">
+    <mxGraphModel dx="1042" dy="527" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="D8o-z_yzqG9keI2AXlQt-1" value="Holding/Grup de firme" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="150" y="50" width="490" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="D8o-z_yzqG9keI2AXlQt-2" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1" target="D8o-z_yzqG9keI2AXlQt-3">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="260" y="80" as="sourcePoint" />
+            <mxPoint x="210" y="140" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="260" y="80" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="D8o-z_yzqG9keI2AXlQt-3" value="Puncte de lucru" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="150" y="110" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="D8o-z_yzqG9keI2AXlQt-4" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="353" y="80" as="sourcePoint" />
+            <mxPoint x="353" y="110" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="353" y="90" />
+              <mxPoint x="353" y="80" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="D8o-z_yzqG9keI2AXlQt-5" value="Locatii" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="280" y="110" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="D8o-z_yzqG9keI2AXlQt-6" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="483" y="80" as="sourcePoint" />
+            <mxPoint x="483" y="110" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="483" y="90" />
+              <mxPoint x="483" y="80" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="D8o-z_yzqG9keI2AXlQt-7" value="Societati comerciale" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="410" y="110" width="230" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="D8o-z_yzqG9keI2AXlQt-8" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="223" y="140" as="sourcePoint" />
+            <mxPoint x="223" y="170" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="223" y="150" />
+              <mxPoint x="223" y="140" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="D8o-z_yzqG9keI2AXlQt-9" value="Locatii" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="150" y="170" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="D8o-z_yzqG9keI2AXlQt-12" value="Puncte de lucru" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="410" y="169" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="D8o-z_yzqG9keI2AXlQt-13" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="483" y="199" as="sourcePoint" />
+            <mxPoint x="483" y="229" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="483" y="209" />
+              <mxPoint x="483" y="199" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="D8o-z_yzqG9keI2AXlQt-14" value="Locatii" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="410" y="229" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="D8o-z_yzqG9keI2AXlQt-16" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="480" y="140" as="sourcePoint" />
+            <mxPoint x="480" y="170" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="480" y="150" />
+              <mxPoint x="480" y="140" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="D8o-z_yzqG9keI2AXlQt-17" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="613" y="139" as="sourcePoint" />
+            <mxPoint x="613" y="169" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="613" y="149" />
+              <mxPoint x="613" y="139" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="D8o-z_yzqG9keI2AXlQt-18" value="Locatii" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="540" y="169" width="100" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
